@@ -10,6 +10,13 @@
 </head>
 <body>
 <h1>Welcome </h1>
-<c:out value="${msg }"/>
+<h3>Customer Details </h3>
+<c:out value="${bank.getName() }"></c:out>
+<BR>
+List of Customers: <BR>
+<c:forEach items="${bank.getcList() }" var="c">
+<c:out value="${c.getName() }"/> <BR>
+Plan: <c:out value="${c.getSubscription().getPlan() }"/><HR>
+</c:forEach>
 </body>
 </html>
